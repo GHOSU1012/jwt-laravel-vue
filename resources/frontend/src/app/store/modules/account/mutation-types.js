@@ -1,0 +1,1 @@
+export const RECEIVE_ACCOUNT = 'RECEIVE_ACCOUNT';

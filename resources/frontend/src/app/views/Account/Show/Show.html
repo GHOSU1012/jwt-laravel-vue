@@ -1,0 +1,39 @@
+<v-layout>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        {{account.name}}
+      </h1>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>
+            Id
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Email
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            {{account.id}}
+          </td>
+          <td>
+            {{account.name}}
+          </td>
+          <td>
+            {{account.email}}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</v-layout>
