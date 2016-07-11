@@ -8,7 +8,7 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "test": "",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src/app src/main.js test/unit/specs test/e2e/specs"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
@@ -44,7 +44,10 @@
     "less-loader": "^2.2.3",
     "ora": "^0.2.0",
     "shelljs": "^0.6.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
     "url-loader": "^0.5.7",
+    "uuid": "^2.0.2",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.3.0",

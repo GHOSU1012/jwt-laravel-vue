@@ -8,7 +8,7 @@ export const routes = {
   '/account': {
     name: 'account.show',
     component(resolve) {
-      require(['./../views/Account/Show/Show.vue'], resolve);
+      require(['./../pages/Account/Show/Show.vue'], resolve);
     },
     auth: true,
   },
@@ -17,7 +17,7 @@ export const routes = {
   '/login': {
     name: 'login.index',
     component(resolve) {
-      require(['./../views/Login/Index/Index.vue'], resolve);
+      require(['./../pages/Login/Index/Index.vue'], resolve);
     },
     guest: true,
   },

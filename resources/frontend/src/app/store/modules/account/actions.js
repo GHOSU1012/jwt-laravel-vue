@@ -7,3 +7,7 @@ export const receiveAccount = ({ dispatch }) => {
       dispatch(types.RECEIVE_ACCOUNT, data);
     });
 };
+
+export const clearAccount = ({ dispatch }) => {
+  dispatch(types.CLEAR_ACCOUNT);
+};

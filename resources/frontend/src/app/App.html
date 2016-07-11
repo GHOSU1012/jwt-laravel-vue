@@ -1,3 +1,20 @@
 <div>
   <router-view></router-view>
+  <div
+    class="notification-wrapper"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 pull-right">
+          <notification
+            v-for="notification in notifications"
+            :style="notification.type"
+            :message="notification.message"
+            :id="notification.id"
+            :close-function="deleteNotification"
+          ></notification>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

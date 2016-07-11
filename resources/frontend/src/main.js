@@ -3,11 +3,11 @@ import Vue from 'vue';
 import VuexRouterSync from 'vuex-router-sync';
 import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
-
-// Application specific
 import * as App from './app/App.vue';
 import { routes, redirects } from './app/routes';
 import store from './app/store';
+
+// Application specific
 
 // Import vuex, vue-resource and vue-router
 Vue.use(VueResource);
@@ -16,7 +16,7 @@ Vue.use(VueRouter);
 // Configure Vue
 Vue.config.debug = process.env.NODE_ENV !== 'production';
 Vue.http.headers.common.Accept = 'application/json';
-Vue.http.options.root = `http://${process.env.API_SERVER}/api`;
+Vue.http.options.root = process.env.API_LOCATION;
 store.dispatch('CHECK_AUTHENTICATION');
 
 // Initialize the router
@@ -34,6 +34,9 @@ router.beforeEach((transition) => {
     transition.next();
   }
 });
+
+// Require Bootstrap
+require('./assets/vendor/bootstrap/less/bootstrap.less');
 
 // Using VueRouter with Vuex
 VuexRouterSync.sync(store, router);

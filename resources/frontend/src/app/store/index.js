@@ -6,6 +6,7 @@ import createLogger from 'vuex/logger';
 // Application specific
 import auth from './modules/auth';
 import account from './modules/account';
+import notification from './modules/notification';
 
 Vue.use(Vuex);
 
@@ -16,6 +17,7 @@ export default new Vuex.Store({
   modules: {
     auth,
     account,
+    notification,
   },
 
   /**
