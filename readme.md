@@ -2,6 +2,13 @@
 
 > A basic JWT example using Laravel and Vue.js
 
+## Login
+When you visit the page, you can login using:
+```
+email:    test@test.com
+password: Test@123
+```
+
 ## Build Setup - Backend
 
 ``` bash
@@ -35,4 +42,17 @@ npm run build
 # to your server.
 # You can change the location in the config/dev.env.js file
 npm run dev
+```
+
+## Using Homestead with Vagrant
+``` bash
+# Initialize Homestead
+./vendor/bin/homestead make
+
+# Edit Homestead.yaml and .env
+
+# Create and migrate the database
+php artisan migrate --seed
+
+# Visit localhost:8000 or your custom url
 ```

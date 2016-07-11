@@ -10,3 +10,4 @@ _ide_helper_models.php
 Homestead.yaml
 Homestead.json
 .env
+.vagrant
