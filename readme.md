@@ -20,14 +20,13 @@ php artisan migrate --seed
 ## Build Setup - Frontend
 ``` bash
 # The frontend is already compiled, but if you want to
-# develop or recomple, follow those steps
+# develop or recompile, follow those steps
 
 # Go to the frontend directory
 cd resources/frontend
 
 # Install dependencies
-npm install
-bower install
+npm install && bower install
 
 # Build the single page application frontend
 npm run build
