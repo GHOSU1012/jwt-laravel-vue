@@ -1,6 +1,6 @@
-# jwt-tutorial
+# jwt-example
 
-> A Laravel and Vue.js project
+> A basic JWT example using Laravel and Vue.js
 
 ## Build Setup - Backend
 
