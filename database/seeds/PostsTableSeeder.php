@@ -14,10 +14,10 @@ class PostsTableSeeder extends Seeder
     {
         $user = App\User::first();
 
-        factory(App\Post::class, 50)->make([
+        factory(App\Post::class)->make([
+            'title' => 'Test Post',
+            'content' => 'Lorem ipsum',
             'user_id' => $user->id
-        ])->each(function ($post) use ($user) {
-            $post->save();
-        });
+        ])->save();
     }
 }
