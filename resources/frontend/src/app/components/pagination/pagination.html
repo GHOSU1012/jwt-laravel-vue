@@ -1,0 +1,32 @@
+<nav>
+  <ul class="pagination no-margin">
+    <li
+      :class="{'disabled' : this.previousDisabled }"
+    >
+      <a
+        href="#"
+        @click.prevent="previousPage"
+      >
+        <span>&laquo;</span>
+      </a>
+    </li>
+    <li
+      v-for="page in pagination.totalPages"
+      :class="{'active': $index + 1 === pagination.currentPage}"
+    >
+      <a href="#"
+         @click.prevent="goToPage($index + 1)"
+      >{{$index + 1}}</a>
+    </li>
+    <li
+      :class="{'disabled' : this.nextDisabled }"
+    >
+      <a
+        href="#"
+        @click.prevent="nextPage"
+      >
+        <span>&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

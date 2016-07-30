@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\API\V1;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests;
+use App\Http\Controllers\API\Controller;
 use App\Http\Requests\API\Auth\AuthenticateRequest;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -26,10 +25,10 @@ class AuthController extends Controller
 
         try {
             if ( ! $token = JWTAuth::attempt($credentials)) {
-                return response()->json([ 'error' => 'invalid_credentials' ], 401);
+                return $this->respondUnauthorized('Invalid credentials');
             }
         } catch (JWTException $e) {
-            return response()->json([ 'error' => 'could_not_create_token' ], 500);
+            return $this->respondInternalError('Could not create token');
         }
 
         return response()->json(compact('token'));

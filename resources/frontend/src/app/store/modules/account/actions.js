@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import * as types from './mutation-types';
 
-export const receiveAccount = ({ dispatch }) => {
+export const fetchAccount = ({ dispatch }) => {
   Vue.http.get('account')
     .then(({ data }) => {
-      dispatch(types.RECEIVE_ACCOUNT, data);
+      dispatch(types.FETCH_ACCOUNT, data);
     });
 };
 

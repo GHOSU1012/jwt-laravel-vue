@@ -1,2 +1,2 @@
-export const RECEIVE_ACCOUNT = 'RECEIVE_ACCOUNT';
+export const FETCH_ACCOUNT = 'FETCH_ACCOUNT';
 export const CLEAR_ACCOUNT = 'CLEAR_ACCOUNT';

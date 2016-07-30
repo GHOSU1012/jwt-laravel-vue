@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API\Auth;
 
-use App\Http\Requests\Request;
+use App\Http\Requests\API\Request;
 
 class AuthenticateRequest extends Request
 {
@@ -26,7 +26,7 @@ class AuthenticateRequest extends Request
     public function rules()
     {
         return [
-            'email' => [
+            'email'    => [
                 'required',
                 'email'
             ],

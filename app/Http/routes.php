@@ -14,11 +14,44 @@
 Route::group([
     'middleware' => [
         'api',
+        'cors',
+        'jwt.auth'
+    ],
+    'as'         => 'api::',
+    'namespace'  => 'API\V1',
+    'prefix'     => 'api/v1'
+], function () {
+
+    Route::group([
+        'as'     => 'account.',
+        'prefix' => 'account'
+    ], function () {
+        Route::get('', [
+            'as'   => 'show',
+            'uses' => 'AccountController@show'
+        ]);
+    });
+
+    Route::group([
+        'as'     => 'post.',
+        'prefix' => 'posts'
+    ], function () {
+        Route::get('', [
+            'as'   => 'index',
+            'uses' => 'PostController@index'
+        ]);
+    });
+
+});
+
+Route::group([
+    'middleware' => [
+        'api',
         'cors'
     ],
     'as'         => 'api::',
-    'namespace'  => 'API',
-    'prefix'     => 'api'
+    'namespace'  => 'API\V1',
+    'prefix'     => 'api/v1'
 ], function () {
 
     Route::post('auth', [
@@ -26,11 +59,6 @@ Route::group([
         'uses' => 'AuthController@authenticate'
     ]);
 
-    Route::get('account', [
-        'middleware' => [ 'jwt.auth' ],
-        'as'         => 'account.show',
-        'uses'       => 'AccountController@show'
-    ]);
 });
 
 Route::get('/', function () {

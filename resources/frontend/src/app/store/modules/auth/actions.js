@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import * as types from './mutation-types';
-import { receiveAccount, clearAccount } from './../account/actions';
+import { fetchAccount, clearAccount } from './../account/actions';
+import { fetchPosts, clearPost } from './../post/actions';
 import { addNotification } from './../notification/actions';
 
 export const login = ({ dispatch }, user) => {
@@ -8,13 +9,14 @@ export const login = ({ dispatch }, user) => {
     .then(
       ({ data }) => {
         dispatch(types.LOGIN_SUCCESSFUL, data.token);
-        receiveAccount({ dispatch });
+        fetchAccount({ dispatch });
+        fetchPosts({ dispatch });
         addNotification({ dispatch }, {
           type: 'success',
           message: 'Login successful!',
         });
         window.router.go({
-          name: 'account.show',
+          name: 'post.index',
         });
       },
       () => {
@@ -29,6 +31,7 @@ export const login = ({ dispatch }, user) => {
 export const logout = ({ dispatch }) => {
   dispatch(types.LOGOUT);
   clearAccount({ dispatch });
+  clearPost({ dispatch });
   addNotification({ dispatch }, {
     type: 'success',
     message: 'Logout successful!',

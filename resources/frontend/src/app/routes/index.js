@@ -22,6 +22,15 @@ export const routes = {
     auth: true,
   },
 
+  // Account Resource
+  '/post': {
+    name: 'post.index',
+    component: loader.page('post', 'index', true),
+
+    // If the user needs to be authenticated to view this page
+    auth: true,
+  },
+
   // Dashboard routes
   '/login': {
     name: 'login.index',

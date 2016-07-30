@@ -29,7 +29,8 @@
    */
 
   import store from './store';
-  import { receiveAccount } from './store/modules/account/actions';
+  import { fetchAccount } from './store/modules/account/actions';
+  import { fetchPosts } from './store/modules/post/actions';
   import { deleteNotification } from './store/modules/notification/actions';
   import loader from './utils/loader';
 
@@ -52,7 +53,8 @@
         notifications: ({ notification }) => notification.all,
       },
       actions: {
-        receiveAccount,
+        fetchAccount,
+        fetchPosts,
         deleteNotification,
       },
     },
@@ -61,7 +63,8 @@
       // If the user is authenticated,
       // fetch the data from the API
       if (this.authenticated) {
-        this.receiveAccount();
+        this.fetchAccount();
+        this.fetchPosts();
       }
     },
 

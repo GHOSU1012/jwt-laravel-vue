@@ -11,6 +11,7 @@ import createLogger from 'vuex/logger';
 import auth from './modules/auth';
 import account from './modules/account';
 import notification from './modules/notification';
+import post from './modules/post';
 
 Vue.use(Vuex);
 
@@ -22,6 +23,7 @@ export default new Vuex.Store({
     auth,
     account,
     notification,
+    post,
   },
 
   /**
@@ -30,7 +32,7 @@ export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
 
   /*
-   * Middleware for Vuex
+   * Plugins for Vuex
    */
-  middlewares: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],
+  plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],
 });
