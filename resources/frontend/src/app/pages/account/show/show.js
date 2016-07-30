@@ -1,5 +1,5 @@
 /* ============
- * Account Show page
+ * Account Show Page
  * ============
  */
 

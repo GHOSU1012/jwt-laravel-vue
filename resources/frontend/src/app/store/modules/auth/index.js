@@ -1,5 +1,5 @@
 /* ============
- * The auth module
+ * Auth Module
  * ============
  */
 

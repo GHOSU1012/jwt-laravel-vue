@@ -1,5 +1,5 @@
 /* ============
- * Minimal layout
+ * Minimal Layout
  * ============
  */
 

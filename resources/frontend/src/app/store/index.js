@@ -1,5 +1,5 @@
 /* ============
- * The Vuex store
+ * Vuex Store
  * ============
  *
  * The store of the application

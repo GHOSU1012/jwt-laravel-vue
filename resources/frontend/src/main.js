@@ -1,5 +1,5 @@
 /* ============
- * Main file
+ * Main File
  * ============
  *
  * Will initialize the application

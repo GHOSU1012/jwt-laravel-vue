@@ -22,7 +22,7 @@
 </template>
 <script>
   /* ============
-   * The entry point
+   * Entry Point
    * ============
    *
    * The entry point for the application

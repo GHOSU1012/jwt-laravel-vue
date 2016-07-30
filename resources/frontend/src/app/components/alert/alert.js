@@ -1,5 +1,5 @@
 /* ============
- * Notification component
+ * Alert Component
  * ============
  */
 

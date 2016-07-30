@@ -1,8 +1,8 @@
 /* ============
- * The routing
+ * Routes File
  * ============
  *
- * In this file, the routes and redirects are defined
+ * The routes and redirects are defined in this file
  */
 
 /**

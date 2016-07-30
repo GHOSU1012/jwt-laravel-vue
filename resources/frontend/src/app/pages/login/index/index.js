@@ -1,5 +1,5 @@
 /* ============
- * Login Index page
+ * Login Index Page
  * ============
  */
 

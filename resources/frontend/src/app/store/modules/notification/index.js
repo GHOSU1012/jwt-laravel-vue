@@ -1,5 +1,5 @@
 /* ============
- * The notification module
+ * Notification Module
  * ============
  */
 

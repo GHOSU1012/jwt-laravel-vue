@@ -1,5 +1,5 @@
 /* ============
- * Default layout
+ * Default Layout
  * ============
  */
 
