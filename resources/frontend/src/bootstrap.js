@@ -86,6 +86,14 @@ VuexRouterSync.sync(Store, Router);
 
 window.router = Router;
 
+/* ============
+ * jQuery
+ * ============
+ *
+ * Require jQuery
+ */
+import jQuery from './assets/vendor/jquery/dist/jquery';
+window.$ = window.jQuery = jQuery;
 
 /* ============
  * Bootstrap
@@ -94,7 +102,7 @@ window.router = Router;
  * Require bootstrap for the app
  */
 require('./assets/vendor/bootstrap/less/bootstrap.less');
-
+require('./assets/vendor/bootstrap/dist/js/bootstrap');
 
 /* ============
  * Styling

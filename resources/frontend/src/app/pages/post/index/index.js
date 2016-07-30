@@ -7,11 +7,6 @@ import loader from './../../../utils/loader';
 import { fetchPosts } from './../../../store/modules/post/actions';
 
 export default {
-  data() {
-    return {
-      limit: this.pagination.limit,
-    };
-  },
 
   vuex: {
     getters: {
@@ -22,11 +17,15 @@ export default {
       fetchPosts,
     },
   },
-  watch: {
-    limit(newValue, oldValue) {
-      if (newValue !== oldValue && newValue !== this.pagination.limit) {
-        this.fetchPosts(1, newValue);
-      }
+
+  computed: {
+    limit: {
+      get() {
+        return this.pagination.limit;
+      },
+      set(val) {
+        this.fetchPosts(1, val);
+      },
     },
   },
 
