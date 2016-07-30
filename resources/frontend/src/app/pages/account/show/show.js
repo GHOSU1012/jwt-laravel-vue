@@ -3,7 +3,7 @@
  * ============
  */
 
-import * as VLayout from './../../../layouts/Default/Default.vue';
+import loader from './../../../utils/loader';
 
 export default {
   vuex: {
@@ -13,6 +13,6 @@ export default {
   },
 
   components: {
-    VLayout,
+    VLayout: loader.layout('default'),
   },
 };

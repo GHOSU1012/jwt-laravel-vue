@@ -31,6 +31,7 @@
   import store from './store';
   import { receiveAccount } from './store/modules/account/actions';
   import { deleteNotification } from './store/modules/notification/actions';
+  import loader from './utils/loader';
 
   export default {
     /*
@@ -65,9 +66,7 @@
     },
 
     components: {
-      alert(resolve) {
-        require(['./components/alert/alert.vue'], resolve);
-      },
+      alert: loader.component('alert', false),
     },
   };
 </script>

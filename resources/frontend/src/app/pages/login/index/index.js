@@ -3,8 +3,8 @@
  * ============
  */
 
-import * as VLayout from './../../../layouts/Minimal/Minimal.vue';
 import { login } from './../../../store/modules/auth/actions';
+import loader from './../../../utils/loader';
 
 export default {
   /**
@@ -26,6 +26,6 @@ export default {
   },
 
   components: {
-    VLayout,
+    VLayout: loader.layout('minimal'),
   },
 };

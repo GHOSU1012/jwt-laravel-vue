@@ -5,6 +5,8 @@
  * The routes and redirects are defined in this file
  */
 
+import loader from './../utils/loader';
+
 /**
  * The routes
  *
@@ -14,9 +16,7 @@ export const routes = {
   // Account Resource
   '/account': {
     name: 'account.show',
-    component(resolve) {
-      require(['./../pages/account/show/show.vue'], resolve);
-    },
+    component: loader.page('account', 'show', true),
 
     // If the user needs to be authenticated to view this page
     auth: true,
@@ -25,9 +25,7 @@ export const routes = {
   // Dashboard routes
   '/login': {
     name: 'login.index',
-    component(resolve) {
-      require(['./../pages/login/index/index.vue'], resolve);
-    },
+    component: loader.page('login', 'index', true),
 
     // If the user needs to be a guest to view this page
     guest: true,
