@@ -34,5 +34,5 @@ Route::group([
 });
 
 Route::get('/', function () {
-    return View::make('welcome');
+    return View::make('index');
 });
