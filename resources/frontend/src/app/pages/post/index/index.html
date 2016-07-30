@@ -1,4 +1,11 @@
 <v-layout>
+  <div class="pull-right">
+    <a class="btn btn-primary" v-link="{name: 'post.create'}">
+      Create Post
+    </a>
+  </div>
+  <div class="clearfix"></div>
+  <br/>
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h1 class="panel-title">
@@ -18,6 +25,9 @@
           <th>
             Content
           </th>
+          <th>
+            Actions
+          </th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +40,11 @@
           </td>
           <td>
             {{post.content}}
+          </td>
+          <td>
+            <a class="btn btn-danger" @click.prevent="deletePost(post.id)">
+              <i class="glyphicon glyphicon-trash"></i>
+            </a>
           </td>
         </tr>
         </tbody>

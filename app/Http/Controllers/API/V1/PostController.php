@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\API\Controller;
+use App\Http\Requests\API\Post\StoreRequest;
 use App\Post;
 use App\Transformers\PostTransformer;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -42,13 +44,19 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param StoreRequest $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //
+        $user = Auth::user();
+
+        $post = new Post($request->all());
+        $post->user()->associate($user);
+        $post->save();
+
+        return $this->respondCreated('The post has been created');
     }
 
 
@@ -84,12 +92,15 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param Post $post
      *
      * @return \Illuminate\Http\Response
+     *
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return $this->respondWithSuccess('The post has been deleted');
     }
 }

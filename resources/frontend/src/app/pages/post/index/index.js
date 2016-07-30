@@ -4,7 +4,7 @@
  */
 
 import loader from './../../../utils/loader';
-import { fetchPosts } from './../../../store/modules/post/actions';
+import { fetchPosts, deletePost } from './../../../store/modules/post/actions';
 
 export default {
 
@@ -15,6 +15,7 @@ export default {
     },
     actions: {
       fetchPosts,
+      deletePost,
     },
   },
 

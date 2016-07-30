@@ -40,6 +40,16 @@ Route::group([
             'as'   => 'index',
             'uses' => 'PostController@index'
         ]);
+
+        Route::post('', [
+            'as' => 'store',
+            'uses' => 'PostController@store',
+        ]);
+
+        Route::delete('{post}', [
+            'as' => 'destroy',
+            'uses' => 'PostController@destroy'
+        ]);
     });
 
 });

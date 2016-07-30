@@ -31,6 +31,14 @@ export const routes = {
     auth: true,
   },
 
+  '/post/create': {
+    name: 'post.create',
+    component: loader.page('post', 'create', true),
+
+    // If the user needs to be authenticated to view this page
+    auth: true,
+  },
+
   // Dashboard routes
   '/login': {
     name: 'login.index',
