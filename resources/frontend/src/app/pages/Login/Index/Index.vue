@@ -1,2 +1,2 @@
-<template src="./Index.html"></template>
-<script src="./Index.js" lang="babel"></script>
+<template src="./index.html"></template>
+<script src="./index.js" lang="babel"></script>

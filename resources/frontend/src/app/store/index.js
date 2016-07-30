@@ -1,9 +1,13 @@
-// Import node modules
+/* ============
+ * The Vuex store
+ * ============
+ *
+ * The store of the application
+ */
+
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createLogger from 'vuex/logger';
-
-// Application specific
 import auth from './modules/auth';
 import account from './modules/account';
 import notification from './modules/notification';
@@ -11,8 +15,8 @@ import notification from './modules/notification';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  /**
-   * The modules used in the store
+  /*
+   * Assign the modules to the store
    */
   modules: {
     auth,
@@ -25,8 +29,8 @@ export default new Vuex.Store({
    */
   strict: process.env.NODE_ENV !== 'production',
 
-  /**
-   * The middlewares
+  /*
+   * Middleware for Vuex
    */
   middlewares: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],
 });

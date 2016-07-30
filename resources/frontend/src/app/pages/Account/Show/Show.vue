@@ -1,2 +1,2 @@
-<template src="./Show.html"></template>
-<script src="./Show.js" lang="babel"></script>
+<template src="./show.html"></template>
+<script src="./show.js" lang="babel"></script>

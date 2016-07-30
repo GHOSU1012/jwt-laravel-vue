@@ -13,7 +13,7 @@ export const login = ({ dispatch }, user) => {
           type: 'success',
           message: 'Login successful!',
         });
-        Vue.router.go({
+        window.router.go({
           name: 'account.show',
         });
       },
@@ -33,7 +33,7 @@ export const logout = ({ dispatch }) => {
     type: 'success',
     message: 'Logout successful!',
   });
-  Vue.router.go({
+  window.router.go({
     name: 'login.index',
   });
 };

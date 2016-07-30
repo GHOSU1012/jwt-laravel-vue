@@ -1,3 +1,8 @@
+/* ============
+ * Default layout
+ * ============
+ */
+
 import { logout } from './../../store/modules/auth/actions';
 
 export default {

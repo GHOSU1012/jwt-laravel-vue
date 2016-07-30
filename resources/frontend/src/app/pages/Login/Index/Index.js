@@ -1,3 +1,8 @@
+/* ============
+ * Login Index page
+ * ============
+ */
+
 import * as VLayout from './../../../layouts/Minimal/Minimal.vue';
 import { login } from './../../../store/modules/auth/actions';
 

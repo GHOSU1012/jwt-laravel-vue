@@ -1,3 +1,8 @@
+/* ============
+ * Notification component
+ * ============
+ */
+
 export default {
   props: {
     style: {

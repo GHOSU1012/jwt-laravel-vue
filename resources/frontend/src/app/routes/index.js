@@ -1,3 +1,10 @@
+/* ============
+ * The routing
+ * ============
+ *
+ * In this file, the routes and redirects are defined
+ */
+
 /**
  * The routes
  *
@@ -8,8 +15,10 @@ export const routes = {
   '/account': {
     name: 'account.show',
     component(resolve) {
-      require(['./../pages/Account/Show/Show.vue'], resolve);
+      require(['./../pages/account/show/show.vue'], resolve);
     },
+
+    // If the user needs to be authenticated to view this page
     auth: true,
   },
 
@@ -17,8 +26,10 @@ export const routes = {
   '/login': {
     name: 'login.index',
     component(resolve) {
-      require(['./../pages/Login/Index/Index.vue'], resolve);
+      require(['./../pages/login/index/index.vue'], resolve);
     },
+
+    // If the user needs to be a guest to view this page
     guest: true,
   },
 };
