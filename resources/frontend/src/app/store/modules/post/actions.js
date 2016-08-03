@@ -2,6 +2,10 @@ import Vue from 'vue';
 import * as types from './mutation-types';
 import { addNotification } from './../notification/actions';
 
+export const testPosts = ({ dispatch }, data, pagination) => {
+  dispatch(types.FETCH_POSTS, data, pagination);
+};
+
 export const fetchPosts = ({ dispatch }, page = 1, limit = 5) => {
   Vue.http.get(`posts?page=${page}&limit=${limit}`)
     .then(

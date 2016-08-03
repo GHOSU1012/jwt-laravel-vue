@@ -33,6 +33,7 @@
   import { fetchPosts } from './store/modules/post/actions';
   import { deleteNotification } from './store/modules/notification/actions';
   import loader from './utils/loader';
+  import postResource from './api/post';
 
   export default {
     /**
@@ -62,8 +63,9 @@
       // If the user is authenticated,
       // fetch the data from the API
       if (this.authenticated) {
+        postResource.all();
         this.fetchAccount();
-        this.fetchPosts();
+//        this.fetchPosts();
       }
     },
 
