@@ -25,7 +25,7 @@
    * Entry Point
    * ============
    *
-   * The entry point for the application
+   * The entry point of the application
    */
 
   import store from './store';
@@ -35,16 +35,12 @@
   import loader from './utils/loader';
 
   export default {
-    /*
+    /**
      * The store
-     *
-     * Vuex is being used for a single point of truth
      */
     store,
 
-    /*
-     * Vuex
-     *
+    /**
      * The Vuex store
      */
     vuex: {
@@ -59,6 +55,9 @@
       },
     },
 
+    /**
+     * Fires when the app is loaded
+     */
     ready() {
       // If the user is authenticated,
       // fetch the data from the API
@@ -68,8 +67,11 @@
       }
     },
 
+    /**
+     * Components being used
+     */
     components: {
-      alert: loader.component('alert', false),
+      alert: loader.component('alert'),
     },
   };
 </script>

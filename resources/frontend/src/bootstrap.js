@@ -86,6 +86,7 @@ VuexRouterSync.sync(Store, Router);
 
 window.router = Router;
 
+
 /* ============
  * jQuery
  * ============
@@ -95,6 +96,7 @@ window.router = Router;
 import jQuery from './assets/vendor/jquery/dist/jquery';
 window.$ = window.jQuery = jQuery;
 
+
 /* ============
  * Bootstrap
  * ============
@@ -103,6 +105,7 @@ window.$ = window.jQuery = jQuery;
  */
 require('./assets/vendor/bootstrap/less/bootstrap.less');
 require('./assets/vendor/bootstrap/dist/js/bootstrap');
+
 
 /* ============
  * Styling

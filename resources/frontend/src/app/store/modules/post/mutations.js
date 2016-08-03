@@ -8,8 +8,8 @@ import {
 
 export const mutations = {
   [FETCH_POSTS](state, customers, pagination) {
-    state.all = customerTransformer.receiveCollection(customers);
-    state.pagination = paginationTransformer.receive(pagination);
+    state.all = customerTransformer.fetchCollection(customers);
+    state.pagination = paginationTransformer.fetch(pagination);
   },
 
   [CLEAR_POST](state) {

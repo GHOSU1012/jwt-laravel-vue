@@ -16,7 +16,7 @@ import post from './modules/post';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  /*
+  /**
    * Assign the modules to the store
    */
   modules: {
@@ -31,7 +31,7 @@ export default new Vuex.Store({
    */
   strict: process.env.NODE_ENV !== 'production',
 
-  /*
+  /**
    * Plugins for Vuex
    */
   plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],

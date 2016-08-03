@@ -1,33 +1,40 @@
-export default {
+/* ============
+ * Pagination Transformer
+ * ============
+ *
+ * The transformer for the pagination
+ */
+
+import Transformer from './transformer';
+
+export default class PaginationTransformer extends Transformer {
   /**
-   * Method used to transform an incoming pagination
+   * Method used to transform the fetched pagination
    *
-   * @param {object} pagination The incoming pagination
-   *
-   * @returns {object} The transformed pagination
+   * @param pagination The fetched pagination
+   * @returns {Object} The transformed pagination
    */
-  receive(pagination) {
+  static fetch(pagination) {
     return {
       totalCount: pagination.total_count,
       totalPages: pagination.total_pages,
       currentPage: pagination.current_page,
       limit: pagination.limit,
     };
-  },
+  }
 
   /**
-   * Method used to transform an outgoing pagination
+   * Method used to transform a send pagination
    *
-   * @param {object} pagination The outgoing pagination
-   *
-   * @returns {object} The transformed pagination
+   * @param pagination The pagination to be send
+   * @returns {Object} The transformed pagination
    */
-  send(pagination) {
+  static send(pagination) {
     return {
       total_count: pagination.totalCount,
       total_pages: pagination.totalPages,
       current_page: pagination.currentPage,
       limit: pagination.limit,
     };
-  },
-};
+  }
+}

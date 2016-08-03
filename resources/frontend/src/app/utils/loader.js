@@ -6,7 +6,6 @@
  */
 
 export default {
-
   /**
    * Method used to load a file
    *
