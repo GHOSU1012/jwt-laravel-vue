@@ -1,3 +1,3 @@
 export const CHECK_AUTHENTICATION = 'CHECK_AUTHENTICATION';
-export const LOGIN_SUCCESSFUL = 'LOGIN_SUCCESSFUL';
 export const LOGOUT = 'LOGOUT';
+export const LOGIN = 'LOGIN';

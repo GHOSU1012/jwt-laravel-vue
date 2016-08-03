@@ -12,6 +12,7 @@ export default class PaginationTransformer extends Transformer {
    * Method used to transform the fetched pagination
    *
    * @param pagination The fetched pagination
+   *
    * @returns {Object} The transformed pagination
    */
   static fetch(pagination) {
@@ -27,6 +28,7 @@ export default class PaginationTransformer extends Transformer {
    * Method used to transform a send pagination
    *
    * @param pagination The pagination to be send
+   *
    * @returns {Object} The transformed pagination
    */
   static send(pagination) {

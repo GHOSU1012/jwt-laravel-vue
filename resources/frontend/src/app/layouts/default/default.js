@@ -3,15 +3,12 @@
  * ============
  */
 
-import { logout } from './../../store/modules/auth/actions';
+import authService from './../../services/auth';
 
 export default {
-  /**
-   * The Vuex data
-   */
-  vuex: {
-    actions: {
-      logout,
+  methods: {
+    logout() {
+      authService.logout();
     },
   },
 };

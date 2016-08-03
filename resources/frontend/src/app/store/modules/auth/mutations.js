@@ -2,7 +2,7 @@ import Vue from 'vue';
 import {
   LOGOUT,
   CHECK_AUTHENTICATION,
-  LOGIN_SUCCESSFUL,
+  LOGIN,
 } from './mutation-types';
 
 export const mutations = {
@@ -13,7 +13,7 @@ export const mutations = {
     }
   },
 
-  [LOGIN_SUCCESSFUL](state, token) {
+  [LOGIN](state, token) {
     state.authenticated = true;
     localStorage.setItem('id_token', token);
     Vue.http.headers.common.Authorization = `Bearer ${token}`;

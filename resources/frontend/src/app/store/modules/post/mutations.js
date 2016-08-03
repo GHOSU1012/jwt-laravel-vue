@@ -1,5 +1,3 @@
-import customerTransformer from './../../../transformers/post';
-import paginationTransformer from './../../../transformers/pagination';
 import { state as baseState } from './state';
 import {
   FETCH_POSTS,
@@ -7,9 +5,9 @@ import {
 } from './mutation-types';
 
 export const mutations = {
-  [FETCH_POSTS](state, customers, pagination) {
-    state.all = customerTransformer.fetchCollection(customers);
-    state.pagination = paginationTransformer.fetch(pagination);
+  [FETCH_POSTS](state, posts, pagination) {
+    state.all = posts;
+    state.pagination = pagination;
   },
 
   [CLEAR_POST](state) {

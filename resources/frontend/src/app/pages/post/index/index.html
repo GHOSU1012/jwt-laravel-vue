@@ -42,7 +42,7 @@
             {{post.content}}
           </td>
           <td>
-            <a class="btn btn-danger" @click.prevent="deletePost(post.id)">
+            <a class="btn btn-danger" @click.prevent="destroy(post.id)">
               <i class="glyphicon glyphicon-trash"></i>
             </a>
           </td>
@@ -53,7 +53,7 @@
         <div class="col-md-10">
           <v-pagination
             :pagination="pagination"
-            :switch-function="fetchPosts"
+            :switch-function="all"
           ></v-pagination>
         </div>
         <div class="col-md-2">

@@ -3,18 +3,10 @@
  * ============
  */
 
-import { login } from './../../../store/modules/auth/actions';
+import authService from './../../../services/auth';
 import loader from './../../../utils/loader';
 
 export default {
-  /**
-   * The Vuex data
-   */
-  vuex: {
-    actions: {
-      login,
-    },
-  },
 
   data() {
     return {
@@ -23,6 +15,12 @@ export default {
         password: null,
       },
     };
+  },
+
+  methods: {
+    login() {
+      authService.login(this.user);
+    },
   },
 
   components: {

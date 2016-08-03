@@ -29,11 +29,10 @@
    */
 
   import store from './store';
-  import { fetchAccount } from './store/modules/account/actions';
-  import { fetchPosts } from './store/modules/post/actions';
   import { deleteNotification } from './store/modules/notification/actions';
   import loader from './utils/loader';
-  import postResource from './api/post';
+  import postService from './services/post';
+  import accountService from './services/account';
 
   export default {
     /**
@@ -50,8 +49,6 @@
         notifications: ({ notification }) => notification.all,
       },
       actions: {
-        fetchAccount,
-        fetchPosts,
         deleteNotification,
       },
     },
@@ -63,9 +60,8 @@
       // If the user is authenticated,
       // fetch the data from the API
       if (this.authenticated) {
-        postResource.all();
-        this.fetchAccount();
-//        this.fetchPosts();
+        postService.all();
+        accountService.all();
       }
     },
 

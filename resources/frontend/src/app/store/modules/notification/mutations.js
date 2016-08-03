@@ -10,6 +10,7 @@ export const mutations = {
 
     state.all.push(notification);
   },
+
   [DELETE_NOTIFICATION](state, id) {
     state.all = state.all.filter(
       notification => notification.id !== id ? notification : undefined

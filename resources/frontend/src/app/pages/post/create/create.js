@@ -3,19 +3,10 @@
  * ============
  */
 
-import { storePost } from './../../../store/modules/post/actions';
+import postService from './../../../services/post';
 import loader from './../../../utils/loader';
 
 export default {
-  /**
-   * The Vuex data
-   */
-  vuex: {
-    actions: {
-      storePost,
-    },
-  },
-
   data() {
     return {
       post: {
@@ -23,6 +14,12 @@ export default {
         content: '',
       },
     };
+  },
+
+  methods: {
+    store() {
+      postService.store(this.post);
+    },
   },
 
   components: {

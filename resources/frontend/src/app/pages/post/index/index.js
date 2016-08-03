@@ -4,18 +4,13 @@
  */
 
 import loader from './../../../utils/loader';
-import { fetchPosts, deletePost } from './../../../store/modules/post/actions';
+import postService from './../../../services/post';
 
 export default {
-
   vuex: {
     getters: {
       posts: ({ post }) => post.all,
       pagination: ({ post }) => post.pagination,
-    },
-    actions: {
-      fetchPosts,
-      deletePost,
     },
   },
 
@@ -25,8 +20,17 @@ export default {
         return this.pagination.limit;
       },
       set(val) {
-        this.fetchPosts(1, val);
+        postService.all(1, val);
       },
+    },
+  },
+
+  methods: {
+    all(page, limit) {
+      return postService.all(page, limit);
+    },
+    destroy(id) {
+      return postService.destroy(id);
     },
   },
 

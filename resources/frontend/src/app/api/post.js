@@ -1,19 +1,18 @@
 import Vue from 'vue';
 import store from './../store';
-import PostTransformer from './../transformers/post';
-import PaginationTransformer from './../transformers/pagination';
-import { testPosts } from './../store/modules/post/actions';
-
+import { fetchPosts } from './../store/modules/post/actions';
+import postTransformer from './../transformers/post';
+import paginationTransformer from './../transformers/pagination';
 
 export default {
   all(page = 1, limit = 5) {
     Vue.http.get(`posts?page=${page}&limit=${limit}`)
       .then(
         ({ data }) => {
-          testPosts(store,
-            PostTransformer.fetchCollection(data.data),
-            PaginationTransformer.fetch(data.pagination)
-          );
+          const pagination = paginationTransformer.fetch(data.pagination);
+          const posts = postTransformer.fetchCollection(data.data);
+
+          fetchPosts(store, posts, pagination);
         }
       );
   },
