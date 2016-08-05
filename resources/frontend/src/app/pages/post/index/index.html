@@ -31,6 +31,9 @@
         </tr>
         </thead>
         <tbody>
+        <tr v-if="posts.length === 0">
+          <td colspan="4">No posts</td>
+        </tr>
         <tr v-for="post in posts">
           <td>
             {{post.id}}

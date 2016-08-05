@@ -61,7 +61,7 @@
       // fetch the data from the API
       if (this.authenticated) {
         postService.all();
-        accountService.all();
+        accountService.find();
       }
     },
 
