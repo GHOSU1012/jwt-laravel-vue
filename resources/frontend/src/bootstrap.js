@@ -26,10 +26,19 @@ Vue.config.debug = process.env.NODE_ENV !== 'production';
  * responses using a XMLHttpRequest or JSONP.
  */
 import VueResource from 'vue-resource';
+import authService from './app/services/auth';
 Vue.use(VueResource);
 
 Vue.http.headers.common.Accept = 'application/json';
 Vue.http.options.root = process.env.API_LOCATION;
+Vue.http.interceptors.push((request, next) => {
+  next((response) => {
+    // If the token is invalid
+    if (response.status === 401) {
+      authService.logout();
+    }
+  });
+});
 
 
 /* ============
