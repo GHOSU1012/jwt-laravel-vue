@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import { addPost } from './../../store/modules/post/actions';
+import allPosts from './all';
 import store from './../../store';
 import { addNotification } from './../../store/modules/notification/actions';
 
-const success = (post) => {
-  addPost(store, post);
+const success = () => {
+  allPosts();
   addNotification(store, {
     type: 'success',
     message: 'The post has been created!',
@@ -24,5 +24,5 @@ const failed = () => {
 export default (post) => {
   Vue.http
     .post('posts', post)
-    .then(success(post), failed);
+    .then(success, failed);
 };

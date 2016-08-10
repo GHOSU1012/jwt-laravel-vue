@@ -7,7 +7,3 @@ export const fetchPosts = ({ dispatch }, posts, pagination) => {
 export const clearPost = ({ dispatch }) => {
   dispatch(types.CLEAR_POST);
 };
-
-export const addPost = ({ dispatch }, post) => {
-  dispatch(types.ADD_POST, post);
-};
