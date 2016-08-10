@@ -1,7 +1,7 @@
 import {
   FETCH_ACCOUNT,
   CLEAR_ACCOUNT,
-} from './mutation-types';
+} from './../../mutation-types';
 import { state as baseState } from './state';
 
 export const mutations = {

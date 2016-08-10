@@ -2,7 +2,7 @@ import uuid from 'uuid';
 import {
   ADD_NOTIFICATION,
   DELETE_NOTIFICATION,
-} from './mutation-types';
+} from './../../mutation-types';
 
 export const mutations = {
   [ADD_NOTIFICATION](state, notification) {

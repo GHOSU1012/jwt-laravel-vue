@@ -16,7 +16,7 @@ export const routes = {
   // Account Resource
   '/account': {
     name: 'account.show',
-    component: loader.page('account', 'show', true),
+    component: loader.page('account', 'show'),
 
     // If the user needs to be authenticated to view this page
     auth: true,
@@ -25,7 +25,7 @@ export const routes = {
   // Account Resource
   '/post': {
     name: 'post.index',
-    component: loader.page('post', 'index', true),
+    component: loader.page('post', 'index'),
 
     // If the user needs to be authenticated to view this page
     auth: true,
@@ -33,7 +33,7 @@ export const routes = {
 
   '/post/create': {
     name: 'post.create',
-    component: loader.page('post', 'create', true),
+    component: loader.page('post', 'create'),
 
     // If the user needs to be authenticated to view this page
     auth: true,
@@ -42,7 +42,7 @@ export const routes = {
   // Dashboard routes
   '/login': {
     name: 'login.index',
-    component: loader.page('login', 'index', true),
+    component: loader.page('login', 'index'),
 
     // If the user needs to be a guest to view this page
     guest: true,

@@ -3,7 +3,7 @@ import {
   LOGOUT,
   CHECK_AUTHENTICATION,
   LOGIN,
-} from './mutation-types';
+} from './../../mutation-types';
 
 export const mutations = {
   [CHECK_AUTHENTICATION](state) {

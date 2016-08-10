@@ -3,7 +3,7 @@ import {
   FETCH_POSTS,
   CLEAR_POST,
   ADD_POST,
-} from './mutation-types';
+} from './../../mutation-types';
 
 export const mutations = {
   [ADD_POST](state, post) {

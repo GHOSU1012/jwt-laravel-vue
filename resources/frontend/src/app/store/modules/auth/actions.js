@@ -1,4 +1,4 @@
-import * as types from './mutation-types';
+import * as types from './../../mutation-types';
 
 export const login = ({ dispatch }, token) => {
   dispatch(types.LOGIN, token);
