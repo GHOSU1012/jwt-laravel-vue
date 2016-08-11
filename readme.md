@@ -33,7 +33,7 @@ php artisan migrate --seed
 cd resources/frontend
 
 # Install dependencies
-npm install && bower install
+npm install
 
 # Build the single page application frontend
 npm run build
