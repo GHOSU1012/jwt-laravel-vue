@@ -5,7 +5,7 @@
  * Will initialize the application
  */
 import Vue from 'vue';
-import { Router } from './bootstrap';
+import { router } from './bootstrap';
 import * as App from './app';
 
-Router.start(Vue.extend(App), '#app');
+router.start(Vue.extend(App), '#app');
